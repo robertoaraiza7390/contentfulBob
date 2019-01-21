@@ -3,7 +3,7 @@ import Link from 'gatsby-link'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import styles from './video.module.css'
-import ArticlePreview from '../components/article-preview'
+import VideoPreview from '../components/video-preview'
 
 class VideoIndex extends React.Component {
   render() {
@@ -18,11 +18,11 @@ class VideoIndex extends React.Component {
         </div>
         <div className="wrapper">
           <h2 className="section-headline">Recent Videos</h2>
-          <ul className="article-list">
+          <ul className="video-list">
             {posts.map(({ node }) => {
               return (
                 <li key={node.slug}>
-                  <ArticlePreview article={node} />
+                  <VideoPreview video={node} />
                 </li>
               )
             })}
