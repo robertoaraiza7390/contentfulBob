@@ -22,7 +22,7 @@ class MediaIndex extends React.Component {
             {posts.map(({ node }) => {
               return (
                 <li key={node.slug}>
-                  <MediaPreview Media={node} />
+                  <MediaPreview media={node} />
                 </li>
               )
             })}
