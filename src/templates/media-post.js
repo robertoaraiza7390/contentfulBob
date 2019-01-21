@@ -5,9 +5,9 @@ import Img from 'gatsby-image'
 
 import heroStyles from '../components/hero.module.css'
 
-class BlogPostTemplate extends React.Component {
+class MediaPostTemplate extends React.Component {
   render() {
-    const post = get(this.props, 'data.contentfulBlogPost')
+    const post = get(this.props, 'data.contentfulMediaPost')
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
 
     return (
@@ -36,11 +36,11 @@ class BlogPostTemplate extends React.Component {
   }
 }
 
-export default BlogPostTemplate
+export default MediaPostTemplate
 
 export const pageQuery = graphql`
-  query BlogPostBySlug($slug: String!) {
-    contentfulBlogPost(slug: { eq: $slug }) {
+  query MediaPostBySlug($slug: String!) {
+    contentfulMediaPost(slug: { eq: $slug }) {
       title
       publishDate(formatString: "MMMM Do, YYYY")
       heroImage {
