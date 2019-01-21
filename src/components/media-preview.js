@@ -2,18 +2,18 @@ import React from 'react'
 import Link from 'gatsby-link'
 import Img from 'gatsby-image'
 
-import styles from './video-preview.module.css'
+import styles from './media-preview.module.css'
 
-export default ({ video }) => (
+export default ({ media }) => (
   <div className={styles.preview}>
-    <Img alt="" sizes={video.heroImage.sizes} />
+    <Img alt="" sizes={media.heroImage.sizes} />
     <h3 className={styles.previewTitle}>
-      <Link to={`/video/${video.slug}`}>{video.title}</Link>
+      <Link to={`/media/${media.slug}`}>{media.title}</Link>
     </h3>
-    <small>{video.publishDate}</small>
+    <small>{media.publishDate}</small>
     <p
       dangerouslySetInnerHTML={{
-        __html: video.description.childMarkdownRemark.html,
+        __html: media.description.childMarkdownRemark.html,
       }}
     />
   </div>
