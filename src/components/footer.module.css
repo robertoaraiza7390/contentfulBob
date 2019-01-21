@@ -1,4 +1,4 @@
-.navigation {
+footer {
   display: flex;
   justify-content: center;
   list-style: none;
@@ -9,12 +9,12 @@
   font-size: 1.25em;
 }
 
-.navigationItem {
+footerItem {
   display: inline-flex;
   align-items: center;
   margin: 0 1em;
 }
 
-.navigationItem a {
+footerItem a {
   color: currentColor;
 }
