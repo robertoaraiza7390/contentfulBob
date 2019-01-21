@@ -18,7 +18,7 @@ class VideoIndex extends React.Component {
         </div>
         <div className="wrapper">
           <h2 className="section-headline">Recent Videos</h2>
-          <ul className="video-list">
+          <ul className="article-list">
             {posts.map(({ node }) => {
               return (
                 <li key={node.slug}>
